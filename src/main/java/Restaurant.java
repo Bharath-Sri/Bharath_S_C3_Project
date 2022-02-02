@@ -26,7 +26,7 @@ public class Restaurant {
         }
         return false;
     }
-    public void setClosingTime(LocalTime closingTime) {
+    public void closingTime(LocalTime closingTime) {
         this.closingTime = closingTime;
     }
 

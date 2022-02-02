@@ -20,14 +20,14 @@ class RestaurantTest {
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time(){
         createRestaurant();
-        restaurant.setClosingTime(LocalTime.now().plusMinutes(10));
+        restaurant.closingTime(LocalTime.now().plusMinutes(10));
         assertTrue(restaurant.isRestaurantOpen());
     }
 
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
         createRestaurant();
-        restaurant.setClosingTime(LocalTime.now().minusMinutes(10));
+        restaurant.closingTime(LocalTime.now().minusMinutes(10));
         assertFalse(restaurant.isRestaurantOpen());
 
     }
