@@ -38,6 +38,12 @@ class RestaurantServiceTest {
         });
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void total_price_of_the_items_selected(){
+        restaurantCreation();
+        List<String> selectedItemNames = Arrays.asList("Sweet corn soup", "Vegetable lasagne" ) ;
+        assertEquals(388,restaurant.getSelectedItemValue(selectedItemNames));
+    }
 @Test
     public void failing_test_case_total_price_of_the_items_selected(){
     restaurantCreation();
