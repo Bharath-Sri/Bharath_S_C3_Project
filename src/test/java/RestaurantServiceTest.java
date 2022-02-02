@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.*;
 
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,8 +38,12 @@ class RestaurantServiceTest {
         });
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
+@Test
+    public void failing_test_case_total_price_of_the_items_selected(){
+    restaurantCreation();
+        List<String> selectedItemNames = Arrays.asList("Sweet corn soup", "Vegetable lasagne" ) ;
+        assertEquals(380,restaurant.getSelectedItemValue(selectedItemNames));
+    }
 
 
     //>>>>>>>>>>>>>>>>>>>>>>ADMIN: ADDING & REMOVING RESTAURANTS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
