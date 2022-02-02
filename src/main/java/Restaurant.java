@@ -26,12 +26,15 @@ public class Restaurant {
         }
         return false;
     }
+    public void setClosingTime(LocalTime closingTime) {
+        this.closingTime = closingTime;
+    }
+
 
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
         return this.menu;
-
     }
 
     private Item findItemByName(String itemName){
@@ -66,15 +69,6 @@ public class Restaurant {
 
     public String getName() {
         return name;
-    }
-
-    public int getSelectedItemValue(List<Item> item){
-
-        int totalValue = 0;
-        for (Item myItem : item) {
-            totalValue += myItem.getPrice();
-        }
-        return totalValue;
     }
 
 }
